@@ -2,21 +2,18 @@
 
 ## Team Info
 
-- **22471A05XX — Gaddam Meghana**  
+- **22471A0518 — Gaddam Meghana**  
   [LinkedIn](https://linkedin.com/in/xxxxxxxxxx)  
   *Work Done:* Dataset preprocessing, feature engineering, model training, evaluation, and result analysis.
 
-- **22471A05XX — Darla Divya**  
+- **22471A0515 — Darla Divya**  
   [LinkedIn](https://linkedin.com/in/xxxxxxxxxx)  
   *Work Done:* CNN–LSTM model implementation, architecture design, and experimentation.
 
-- **22471A05XX — Gaddipati Keerthana Divya**  
+- **22471A0520 — Gaddipati Keerthana Divya**  
   [LinkedIn](https://linkedin.com/in/xxxxxxxxxx)  
   *Work Done:* Autoencoder-based anomaly detection module and zero-day attack analysis.
 
-- **22471A05XX — Cherukupalli Mallikarjuna Rao**  
-  [LinkedIn](https://linkedin.com/in/xxxxxxxxxx)  
-  *Work Done:* Performance evaluation, metrics comparison, visualization, and documentation.
 
 ---
 
@@ -28,8 +25,8 @@ This project presents a **hybrid deep learning–based intrusion detection frame
 
 ## Paper Reference (Inspiration)
 
-👉 **[A Custom Deep Learning Framework for Identifying Security Threats in Digitally Connected Systems  
-– K. Suresh Babu et al.](Paper URL here)**  
+👉 **[Effectiveness of an Adaptive Deep Learning-Based Intrusion Detection System william villegas-ch]
+(https://ieeexplore.ieee.org/document/10778531)**  
 
 Original IEEE-based research paper used as inspiration for the project model and methodology.
 
