@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+.about-container {
+    width: 100%;
+    min-height: 90vh;
+    background: linear-gradient(135deg, #00111f, #021c35, #000000);
+    color: #00eaff;
+    padding: 50px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.about-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #00eaff;
+    text-shadow: 0px 0px 12px #00eaff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #b0eaff;
+    text-align: justify;
+}
+
+.section-heading {
+    color: #00eaff;
+    font-size: 22px;
+    margin-top: 25px;
+    text-shadow: 0px 0px 8px #00eaff;
+}
+
+.highlight-box {
+    background: rgba(0, 255, 255, 0.08);
+    border-left: 4px solid #00eaff;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+/* Cyber Image */
+.about-img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 25px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00eaff;
+}
+
+</style>
+
+<div class="about-container">
+
+    <h1 class="about-title">About the Intrusion Detection System (IDS)</h1>
+
+    
+
+    <div class="about-content">
+
+        <p>
+            This Intrusion Detection System (IDS) uses advanced 
+            <strong>Machine Learning</strong> techniques to identify malicious network traffic 
+            and protect systems from cyber-attacks. The system analyzes 
+            <strong>41 network features</strong> and classifies traffic into:
+        </p>
+
+        <div class="highlight-box">
+            ✔ Normal  
+            ✔ DoS Attack  
+            ✔ Probe Attack  
+            ✔ R2L Attack  
+            ✔ U2R Attack  
+        </div>
+
+        <h3 class="section-heading">🔒 Why This System?</h3>
+        <p>
+            In today's digital era, attackers constantly attempt to breach network security.  
+            Our IDS helps detect and classify suspicious activity using ML models trained on 
+            benchmark intrusion datasets.
+        </p>
+
+        <h3 class="section-heading">⚙️ Key Features</h3>
+        <div class="highlight-box">
+            • Machine Learning–based Classification  
+            • Real-time Detection  
+            • 41-Feature Input Analysis  
+            • User Login & Prediction History  
+            • Professional Dashboard  
+            • Results Storage with CRUD Operations  
+        </div>
+
+        <h3 class="section-heading">📌 Technologies Used</h3>
+        <div class="highlight-box">
+            • Python (Flask)  
+            • HTML, CSS, Jinja Templates  
+            • SQLite Database  
+            • Scikit-Learn Machine Learning Model  
+            • Joblib for Model Loading  
+        </div>
+
+        <h3 class="section-heading">🎯 Project Objective</h3>
+        <p>
+            To build a robust, scalable, and user-friendly intrusion detection system that helps 
+            in understanding, analyzing, and preventing cyber threats efficiently using ML.
+        </p>
+
+    </div>
+</div>
+
+{% endblock %}

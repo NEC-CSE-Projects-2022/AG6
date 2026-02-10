@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome to IDS Detection App</h1>
+<p>Use the Detection Dashboard to run predictions (requires login).</p>
+<hr>
+<div>
+  <h3>Model availability</h3>
+  <ul>
+    <li>Pickle model loaded: {{ 'Yes' if ml_loaded else 'No' }}</li>
+    <li>CNN model loaded: {{ 'Yes' if cnn_loaded else 'No' }}</li>
+  </ul>
+</div>
+{% endblock %}

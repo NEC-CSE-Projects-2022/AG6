@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>📊 Prediction Results</h2>
+<p>Your previous IDS predictions are listed below with full CRUD options.</p>
+
+{% if results %}
+<table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+        <th>Timestamp</th>
+        <th>Input Values</th>
+        <th>Prediction</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for row in results %}
+    <tr>
+        <td>{{ row['timestamp'] }}</td>
+        <td>{{ row['input_values'] }}</td>
+        <td>{{ row['prediction'] }}</td>
+        <td>
+            <form action="/delete_result/{{ row['id'] }}" method="POST" style="display:inline;">
+                <button type="submit" style="background:red;color:white;">Delete</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<form action="/clear_results" method="POST">
+    <button type="submit" style="background:darkred;color:white;padding:10px;">
+        Clear All Results
+    </button>
+</form>
+
+{% else %}
+<p>No results found. Please make predictions to see history here.</p>
+{% endif %}
+
+{% endblock %}

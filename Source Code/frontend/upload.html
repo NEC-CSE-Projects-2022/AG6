@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>📤 Upload CSV for Intrusion Detection</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="csv_file" accept=".csv" required>
+    <br><br>
+    <button type="submit">🚀 Upload & Analyze</button>
+</form>
+
+{% if results %}
+<hr>
+
+<h3>📊 Analysis Summary</h3>
+<p><strong>Total Records:</strong> {{ results.total }}</p>
+
+<h4>🚨 Attack Distribution</h4>
+<ul>
+{% for attack, percent in results.attack_percentages.items() %}
+    <li>{{ attack }} : {{ percent }}%</li>
+{% endfor %}
+</ul>
+
+<h4>⚙️ Model Performance</h4>
+<ul>
+    <li>Accuracy: {{ results.accuracy }}%</li>
+    <li>Precision: {{ results.precision }}%</li>
+    <li>Recall: {{ results.recall }}%</li>
+    <li>F1 Score: {{ results.f1 }}%</li>
+</ul>
+
+{% endif %}
+
+{% endblock %}

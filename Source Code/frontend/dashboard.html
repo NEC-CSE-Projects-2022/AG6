@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Network Intrusion Detection – Feature Input</h2>
+
+<form method="POST">
+
+<!-- ================= BASIC CONNECTION FEATURES ================= -->
+<h3>🔹 Basic Connection Features</h3>
+
+<label>Duration (seconds)
+    <span title="Length of the connection">:</span>
+</label>
+<input type="number" step="any" name="feature1" value="0"><br><br>
+
+<label>Protocol Type
+    <span title="Network protocol used">:</span>
+</label>
+<select name="feature2">
+    <option value="0">TCP</option>
+    <option value="1">UDP</option>
+    <option value="2">ICMP</option>
+</select><br><br>
+
+<label>Service
+    <span title="Network service on destination">:</span>
+</label>
+<input type="number" name="feature3" value="0"><br><br>
+
+<label>Flag
+    <span title="Status flag of the connection">:</span>
+</label>
+<input type="number" name="feature4" value="0"><br><br>
+
+<label>Source Bytes
+    <span title="Bytes sent from source to destination">:</span>
+</label>
+<input type="number" name="feature5" value="0"><br><br>
+
+<label>Destination Bytes
+    <span title="Bytes sent from destination to source">:</span>
+</label>
+<input type="number" name="feature6" value="0"><br><br>
+
+<label>Land (Same host/port)
+    <span title="1 if source and destination IP/port are same">:</span>
+</label>
+<input type="checkbox" name="feature7" value="1"><br><br>
+
+<!-- ================= LOGIN FEATURES ================= -->
+<h3>🔹 Login & Privilege Features</h3>
+
+<label>Wrong Fragments
+    <span title="Number of wrong fragments">:</span>
+</label>
+<input type="number" name="feature8" value="0"><br><br>
+
+<label>Urgent Packets
+    <span title="Urgent packets count">:</span>
+</label>
+<input type="number" name="feature9" value="0"><br><br>
+
+<label>Failed Logins
+    <span title="Number of failed login attempts">:</span>
+</label>
+<input type="number" name="feature11" value="0"><br><br>
+
+<label>Logged In
+    <span title="1 if successfully logged in">:</span>
+</label>
+<input type="checkbox" name="feature12" value="1"><br><br>
+
+<label>Root Shell
+    <span title="1 if root shell obtained">:</span>
+</label>
+<input type="checkbox" name="feature14" value="1"><br><br>
+
+<label>Guest Login
+    <span title="1 if guest login">:</span>
+</label>
+<input type="checkbox" name="feature22" value="1"><br><br>
+
+<!-- ================= TRAFFIC FEATURES ================= -->
+<h3>🔹 Traffic Features</h3>
+
+<label>Connection Count
+    <span title="Connections to same host">:</span>
+</label>
+<input type="number" name="feature23" value="0"><br><br>
+
+<label>Service Count
+    <span title="Connections to same service">:</span>
+</label>
+<input type="number" name="feature24" value="0"><br><br>
+
+<label>Same Service Rate
+    <span title="Rate of connections to same service">:</span>
+</label>
+<input type="number" step="any" name="feature29" value="0"><br><br>
+
+<label>Different Service Rate
+    <span title="Rate of connections to different services">:</span>
+</label>
+<input type="number" step="any" name="feature30" value="0"><br><br>
+
+<!-- ================= HOST-BASED FEATURES ================= -->
+<h3>🔹 Host-Based Traffic Features</h3>
+
+<label>Destination Host Count
+    <span title="Connections to same destination host">:</span>
+</label>
+<input type="number" name="feature32" value="0"><br><br>
+
+<label>Destination Host Service Count
+    <span title="Connections to same service on destination host">:</span>
+</label>
+<input type="number" name="feature33" value="0"><br><br>
+
+<label>Host Same Service Rate
+    <span title="Same service rate on destination host">:</span>
+</label>
+<input type="number" step="any" name="feature34" value="0"><br><br>
+
+<label>Host Error Rate
+    <span title="Error rate on destination host">:</span>
+</label>
+<input type="number" step="any" name="feature38" value="0"><br><br>
+
+<!-- ================= SUBMIT ================= -->
+<br>
+<button type="submit">🚀 Predict Attack Type</button>
+
+</form>
+
+{% endblock %}
+
+
+dashboard.html
